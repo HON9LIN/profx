@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+
+// Customize bootstrap theme variables
+@import "assets/theme";
+@import "~bootstrap";
+
+// Custom theme styles
+@import "assets/theme/imports";
+
+* {
+  font-family: 'Poppins', sans-serif;
+}

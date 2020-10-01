@@ -1,0 +1,50 @@
+button {
+  outline: none !important;
+}
+
+.btn {
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
+  &.btn-small {
+    font-size: 11px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  &.btn-mini {
+    font-size: 10px;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+  }
+  &.btn-normal {
+    min-width: 170px;
+  }
+  &.btn-x-large {
+    width: 282px;
+    height: 70px;
+    font-size: 20px;
+  }
+}
+
+a.link-underline {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.btn-send {
+  width: 54px;
+  height: 54px;
+  padding: 0;
+}
+
+.btn-chat { // detail header chat button
+  min-width: 145px;
+}
+
+@include media-breakpoint-down(sm) {
+  .btn {
+    &.btn-lt-md-block {
+      width: 100%;
+    }
+  }
+}
