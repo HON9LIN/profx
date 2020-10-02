@@ -4,7 +4,7 @@
       <ul class="list-unstyled mt-30">
         <li class="d-flex align-items-center justify-content-between py-10" [class.overflow-hidden]="isCollapsed">
           <img src="assets/images/logo.png" alt="logo" *ngIf="!isCollapsed"/>
-          <a class="d-flex cursor-pointer" (click)="isCollapsed = !isCollapsed">
+          <a class="d-flex cursor-pointer btn-collapse" [class.collapsed]="!isCollapsed" (click)="isCollapsed = !isCollapsed">
             <img class="inactive" src="assets/images/admin-sidebar/collapse.svg" alt="collapse">
             <img class="active" src="assets/images/admin-sidebar/collapse-active.svg" alt="collapse">
           </a>

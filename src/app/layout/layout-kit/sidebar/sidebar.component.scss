@@ -8,6 +8,13 @@ $sidebar-collapsed-width: 84px;
   z-index: 100;
 }
 
+.btn-collapse {
+  transition: ease all .3s;
+  &.collapsed {
+    transform: rotate(180deg);
+  }
+}
+
 .btn.btn-circle {
   border-radius: 16px;
   height: 32px;
