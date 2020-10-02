@@ -8,6 +8,7 @@ import { ScannerPanelComponent } from './scanner-panel/scanner-panel.component';
 import { RiskPanelComponent } from './risk-panel/risk-panel.component';
 import { TradePanelComponent } from './trade-panel/trade-panel.component';
 import { UiSwitchModule } from 'ngx-ui-switch';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -18,6 +19,7 @@ import { UiSwitchModule } from 'ngx-ui-switch';
     DashboardRoutingModule,
     PipesModule,
     UiSwitchModule,
+    FontAwesomeModule,
   ]
 })
 export class DashboardModule { }

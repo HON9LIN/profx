@@ -9,9 +9,9 @@ export class AdminLayoutComponent implements OnInit {
 
   menus = [
     { icon: 'dashboard', label: 'Dashboard', route: '/' },
-    { icon: 'calendar', label: 'Orders', route: '/orders' },
-    { icon: 'leads', label: 'History', route: '/history' },
-    { icon: 'marketing', label: 'Profile', route: '/profile' },
+    { icon: 'orders', label: 'Orders', route: '/orders' },
+    { icon: 'history', label: 'History', route: '/history' },
+    { icon: 'profile', label: 'Profile', route: '/profile' },
     { icon: 'settings', label: 'Settings', route: '/settings' },
   ];
 

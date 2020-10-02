@@ -2,11 +2,11 @@
   <div class="d-flex flex-column justify-content-between h-100">
     <div class="d-flex flex-column">
       <ul class="list-unstyled mt-30">
-        <li class="d-flex align-items-center py-10" [class.overflow-hidden]="isCollapsed">
+        <li class="d-flex align-items-center justify-content-between py-10" [class.overflow-hidden]="isCollapsed">
+          <img src="assets/images/logo.png" alt="logo" *ngIf="!isCollapsed"/>
           <a class="d-flex cursor-pointer" (click)="isCollapsed = !isCollapsed">
-            <img class="inactive" src="assets/images/admin-sidebar/settings.svg" alt="Settings">
-            <img class="active" src="assets/images/admin-sidebar/settings-active.svg" alt="Settings">
-            <span class="font-15 ml-10">Collapse</span>
+            <img class="inactive" src="assets/images/admin-sidebar/collapse.svg" alt="collapse">
+            <img class="active" src="assets/images/admin-sidebar/collapse-active.svg" alt="collapse">
           </a>
         </li>
       </ul>
@@ -29,8 +29,8 @@
       <ul class="list-unstyled">
         <li class="d-flex align-items-center py-10" [class.overflow-hidden]="isCollapsed">
           <a class="d-flex cursor-pointer" (click)="logout()">
-            <img class="inactive" src="assets/images/admin-sidebar/settings.svg" alt="Log Out">
-            <img class="active" src="assets/images/admin-sidebar/settings-active.svg" alt="Log Out">
+            <img class="inactive" src="assets/images/admin-sidebar/logout.svg" alt="Log Out">
+            <img class="active" src="assets/images/admin-sidebar/logout-active.svg" alt="Log Out">
             <span class="font-15 ml-10">Log Out</span>
           </a>
         </li>
