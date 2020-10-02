@@ -55,3 +55,21 @@
   padding-top: 13px !important;
   padding-bottom: 13px !important;;
 }
+
+.w-400 {
+  width: 400px;
+}
+
+@for $i from 1 through 50 {
+  .border-radius-#{$i} {
+    border-radius: #{$i}px;
+  }
+  .size-#{$i} {
+    width: #{$i}px;
+    height: #{$i}px;
+  }
+}
+
+.simple-shadow {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.7);
+}

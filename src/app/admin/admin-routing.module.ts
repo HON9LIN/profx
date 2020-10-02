@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
 import { AdminLayoutComponent } from '../layout/admin-layout/admin-layout.component';
+import { ROUTES } from '../core/data/routes';
 
 const routes: Routes = [
   {
     path: '', component: AdminLayoutComponent,
     children: [
-      // TODO: add tab pages
+      { path: '', redirectTo: ROUTES.dashboard.root, pathMatch: 'full' },
+      {
+        path: ROUTES.dashboard.root, loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
+      }
     ]
   }
 ];
