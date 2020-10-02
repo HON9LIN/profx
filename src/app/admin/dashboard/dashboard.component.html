@@ -8,14 +8,18 @@
         <span class="border-radius-9 size-18 bg-color-salem mr-30"></span>
         <span class="border-radius-9 size-18 bg-color-salem"></span>
       </div>
-      <button class="btn btn-primary">Buy</button>
+      <button class="btn btn-primary buy-btn">Buy</button>
     </div>
-    <div class="bg-color-shark border-radius-13 m-15 flex-grow-1"></div>
-    <div class="bg-color-shark border-radius-7 m-15 overflow-hidden d-flex flex-column">
+    <div class="bg-color-shark border-radius-13 m-15 flex-grow-1 simple-shadow"></div>
+    <div class="bg-color-shark border-radius-7 m-15 overflow-hidden d-flex flex-column simple-shadow">
       <div class="font-32 pl-20 py-5 color-mercury">Balance</div>
       <hr class="w-100 bg-color-mine-shaft m-0"/>
-      <div class="p-30 color-mercury">
-        hello
+      <div class="p-30 color-mercury d-flex justify-content-around font-18">
+        <div>Balance: <span class="font-weight-bold color-salem">{{balance.balance | formatNumber: ' '}}</span></div>
+        <div>Equity: <span class="font-weight-bold">{{balance.equity | formatNumber: ' '}}</span></div>
+        <div>Margin: <span class="font-weight-bold">{{balance.margin | formatNumber: ' '}}</span></div>
+        <div>Free margin: <span class="font-weight-bold">{{balance.freeMargin | formatNumber: ' '}}</span></div>
+        <div>Margin level (%) <span class="font-weight-bold">{{balance.marginLevel | formatNumber: ' '}}</span></div>
       </div>
     </div>
   </div>
