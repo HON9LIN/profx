@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
     "build": "ng build",
+    "start": "node server.js",
     "test": "ng test",
     "lint": "ng lint",
+    "postinstall": "ng build --aot --prod",
     "e2e": "ng e2e"
   },
   "private": true,
@@ -22,6 +23,7 @@
     "@angular/router": "~10.1.4",
     "@ng-bootstrap/ng-bootstrap": "^7.0.0",
     "bootstrap": "^4.5.2",
+    "express": "^4.17.1",
     "ngx-ui-switch": "^10.0.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
