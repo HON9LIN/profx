@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'profx-trade-panel',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./trade-panel.component.scss']
 })
 export class TradePanelComponent implements OnInit {
+
+  ordered = false;
 
   constructor() { }
 

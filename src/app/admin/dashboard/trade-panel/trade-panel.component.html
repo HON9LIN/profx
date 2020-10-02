@@ -1,28 +1,57 @@
 <div class="bg-color-shark border-radius-7 simple-shadow color-mercury">
   <div class="pl-20 py-10 font-32">Trade</div>
   <hr class="w-100 bg-color-mine-shaft m-0"/>
-  <div class="px-20 py-10 font-weight-light font-17">
-    <div class="d-flex justify-content-between py-5">
-      <div class="d-flex justify-content-between"><span>Balance:&nbsp;</span><span class="color-salem">${{balance}}</span></div>
-      <div class="d-flex justify-content-between"><span>Equity:&nbsp;</span><span>${{equity}}</span></div>
+  <div class="px-20 py-10 font-weight-light font-17 d-flex justify-content-between align-items-center">
+    <span>USD / CAD</span>
+    <button class="btn btn-danger text-white btn-mini border-radius-12 py-5 px-30">Exit</button>
+  </div>
+  <div class="px-20 py-10 font-weight-light font-17 d-flex justify-content-between align-items-center">
+    <div class="color-punch d-flex flex-column">
+      <span class="font-15">1.30844</span>
+      <span class="font-12">LOW: 1.30526</span>
     </div>
-    <div class="d-flex justify-content-between py-5">
-      <div class="d-flex justify-content-between"><span>Free Margin:&nbsp;</span><span>{{freeMargin | number}}</span></div>
-      <div class="d-flex justify-content-between"><span>Margin:&nbsp;</span><span>{{margin | number}}</span></div>
+    <div class="color-salem d-flex flex-column">
+      <span class="font-15">1.30861</span>
+      <span class="font-12">LOW: 1.30949</span>
     </div>
-    <div class="d-flex justify-content-between mt-20">
-      <div class="d-flex flex-column justify-content-between">
-        <div><span>RISK:&nbsp;</span><span class="border-radius-7 light-border px-20">{{risk}}</span></div>
-        <div>PROFIT</div>
+    <div class="d-flex flex-column">
+      <span>AUTO</span>
+      <span>RISK</span>
+    </div>
+    <div>
+      <ui-switch></ui-switch>
+    </div>
+  </div>
+  <hr class="w-100 bg-color-mine-shaft m-0"/>
+  <div class="px-20 py-10 font-weight-light font-17 d-flex flex-column justify-content-between align-items-center">
+    <div class="w-100 d-flex align-items-center justify-content-between mb-5">
+      <div class="w-50 d-flex justify-content-between align-items-center">
+        <span>STOP LOSS</span>
+        <button class="btn color-punch btn-small px-10">-</button>
       </div>
-      <div class="d-flex flex-column justify-content-between">
-        <span class="border-radius-7 light-border px-20">{{riskUsd}}</span>
-        <span class="border-radius-7 light-border px-20">{{profit}}</span>
+      <div class="w-50 d-flex justify-content-between align-items-center">
+        <div class="text-center flex-grow-1">1.29201</div>
+        <button class="btn btn-small px-10 color-salem">+</button>
       </div>
-      <div class="border-radius-7 bg-color-white-opacity px-20 py-5 font-15">
-        <div>$</div>
-        <hr class="w-100 bg-color-mercury"/>
-        <div>%</div>
+    </div>
+    <div class="w-100 d-flex align-items-center justify-content-between mb-5">
+      <div class="w-50 d-flex justify-content-between align-items-center">
+        <span>TAKE PROFIT</span>
+        <button class="btn color-punch btn-small px-10">-</button>
+      </div>
+      <div class="w-50 d-flex justify-content-between align-items-center">
+        <div class="text-center flex-grow-1">1.38234</div>
+        <button class="btn btn-small px-10 color-salem">+</button>
+      </div>
+    </div>
+    <div class="w-100 d-flex align-items-center justify-content-between">
+      <div class="w-50 d-flex justify-content-between align-items-center">
+        <span>VOLUME</span>
+        <button class="btn color-punch btn-small px-10">-</button>
+      </div>
+      <div class="w-50 d-flex justify-content-between align-items-center">
+        <div class="text-center flex-grow-1">0.05</div>
+        <button class="btn btn-small px-10 color-salem">+</button>
       </div>
     </div>
   </div>
