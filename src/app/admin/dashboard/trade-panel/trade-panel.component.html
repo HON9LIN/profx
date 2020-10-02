@@ -1,0 +1,29 @@
+<div class="bg-color-shark border-radius-7 simple-shadow color-mercury">
+  <div class="pl-20 py-10 font-32">Trade</div>
+  <hr class="w-100 bg-color-mine-shaft m-0"/>
+  <div class="px-20 py-10 font-weight-light font-17">
+    <div class="d-flex justify-content-between py-5">
+      <div class="d-flex justify-content-between"><span>Balance:&nbsp;</span><span class="color-salem">${{balance}}</span></div>
+      <div class="d-flex justify-content-between"><span>Equity:&nbsp;</span><span>${{equity}}</span></div>
+    </div>
+    <div class="d-flex justify-content-between py-5">
+      <div class="d-flex justify-content-between"><span>Free Margin:&nbsp;</span><span>{{freeMargin | number}}</span></div>
+      <div class="d-flex justify-content-between"><span>Margin:&nbsp;</span><span>{{margin | number}}</span></div>
+    </div>
+    <div class="d-flex justify-content-between mt-20">
+      <div class="d-flex flex-column justify-content-between">
+        <div><span>RISK:&nbsp;</span><span class="border-radius-7 light-border px-20">{{risk}}</span></div>
+        <div>PROFIT</div>
+      </div>
+      <div class="d-flex flex-column justify-content-between">
+        <span class="border-radius-7 light-border px-20">{{riskUsd}}</span>
+        <span class="border-radius-7 light-border px-20">{{profit}}</span>
+      </div>
+      <div class="border-radius-7 bg-color-white-opacity px-20 py-5 font-15">
+        <div>$</div>
+        <hr class="w-100 bg-color-mercury"/>
+        <div>%</div>
+      </div>
+    </div>
+  </div>
+</div>

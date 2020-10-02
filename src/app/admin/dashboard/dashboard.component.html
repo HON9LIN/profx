@@ -8,7 +8,7 @@
         <span class="border-radius-9 size-18 bg-color-salem mr-30"></span>
         <span class="border-radius-9 size-18 bg-color-salem"></span>
       </div>
-      <button class="btn btn-primary buy-btn">Buy</button>
+      <button class="btn btn-primary buy-btn" (click)="isBuying = !isBuying">Buy</button>
     </div>
     <div class="bg-color-shark border-radius-13 m-15 flex-grow-1 simple-shadow"></div>
     <div class="bg-color-shark border-radius-7 m-15 overflow-hidden d-flex flex-column simple-shadow">
@@ -23,6 +23,9 @@
       </div>
     </div>
   </div>
-  <div class="w-400 m-15 bg-color-shark border-radius-7 simple-shadow">
+  <div class="w-400 m-15 d-flex flex-column">
+    <profx-risk-panel *ngIf="isBuying" class="mb-30"></profx-risk-panel>
+    <profx-trade-panel *ngIf="isBuying" class="mb-30"></profx-trade-panel>
+    <profx-scanner-panel></profx-scanner-panel>
   </div>
 </section>
