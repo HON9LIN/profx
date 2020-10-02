@@ -1,4 +1,4 @@
-<div class="bg-color-shark border-radius-7 simple-shadow color-mercury p-10">
+<div class="bg-color-shark border-radius-7 simple-shadow color-mercury p-10 d-flex flex-column">
   <div class="px-10 font-24 d-flex align-items-center justify-content-between">
     <span>Scanner</span>
     <fa-icon [icon]="faInfoCircle" class="font-20 color-white-opacity cursor-pointer"></fa-icon>
@@ -15,7 +15,12 @@
     </ul>
   </div>
   <hr class="w-100 bg-color-mine-shaft m-0"/>
-  <div class="px-10 py-1 font-weight-light font-12 d-flex">
+  <div class="px-10 py-0 font-weight-light font-12 d-flex justify-content-between align-items-center">
+    <span>Sort by</span>
+    <fa-icon [icon]="faSort" class="font-20 color-white-opacity"></fa-icon>
   </div>
   <hr class="w-100 bg-color-mine-shaft m-0"/>
+  <div class="flex-shrink-1">
+    <profx-scanner-item *ngFor="let trade of tradesData" [value]="trade.value" [type]="trade.type"></profx-scanner-item>
+  </div>
 </div>

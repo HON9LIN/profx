@@ -1,0 +1,10 @@
+<div class="d-flex p-2 justify-content-between align-items-center border-bottom wrapper">
+  <span>USD / GBP</span>
+  <profx-ndots [value]="value"></profx-ndots>
+  <button class="btn btn-mini border-radius-16"
+          [class.btn-primary]="type === TradeType.Buy"
+          [class.btn-danger]="type === TradeType.Sell || type === TradeType.Cancel"
+          [class.btn-warning]="type === TradeType.Trade"
+          [class.text-black]="type === TradeType.Trade"
+  >Buy</button>
+</div>

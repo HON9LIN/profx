@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import { faInfoCircle, faSort } from '@fortawesome/free-solid-svg-icons';
+import { tradesData } from '../../../core/data/trades';
 
 @Component({
   selector: 'profx-scanner-panel',
@@ -8,9 +9,13 @@ import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 })
 export class ScannerPanelComponent implements OnInit {
 
-  faInfoCircle = faInfoCircle;
+  tradesData = tradesData;
 
-  constructor() { }
+  faInfoCircle = faInfoCircle;
+  faSort = faSort;
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
