@@ -33,3 +33,10 @@ p {
 .underline {
   text-decoration: underline !important;
 }
+
+.text-overflow {
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

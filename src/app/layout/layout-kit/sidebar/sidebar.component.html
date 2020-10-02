@@ -1,0 +1,40 @@
+<div class="sidebar bg-color-shark" [class.collapsed]="isCollapsed">
+  <div class="d-flex flex-column justify-content-between h-100">
+    <div class="d-flex flex-column">
+      <ul class="list-unstyled mt-30">
+        <li class="d-flex align-items-center py-10" [class.overflow-hidden]="isCollapsed">
+          <a class="d-flex cursor-pointer" (click)="isCollapsed = !isCollapsed">
+            <img class="inactive" src="assets/images/admin-sidebar/settings.svg" alt="Settings">
+            <img class="active" src="assets/images/admin-sidebar/settings-active.svg" alt="Settings">
+            <span class="font-15 ml-10">Collapse</span>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="list-unstyled overflow-hidden main-menu">
+        <li *ngFor="let item of menus" class="d-flex align-items-center py-10" routerLinkActive="active">
+          <a class="d-flex" [routerLink]="[item.route]" routerLinkActive="active" (click)="isCollapsed = true">
+            <img class="inactive" [src]="'assets/images/admin-sidebar/' + item.icon + '.svg'" [alt]="item.label">
+            <img class="active" [src]="'assets/images/admin-sidebar/' + item.icon + '-active.svg'" [alt]="item.label">
+            <span class="font-15 ml-10">{{ item.label }}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="d-flex flex-column mb-60">
+      <div class="connect-btn-wrapper">
+        <button class="btn btn-primary btn-circle mb-30 text-overflow my-30 font-10 py-0">{{isCollapsed ? '' : 'CONNECTED: INFINOX LIVE-03'}}</button>
+      </div>
+      <ul class="list-unstyled">
+        <li class="d-flex align-items-center py-10" [class.overflow-hidden]="isCollapsed">
+          <a class="d-flex cursor-pointer" (click)="logout()">
+            <img class="inactive" src="assets/images/admin-sidebar/settings.svg" alt="Log Out">
+            <img class="active" src="assets/images/admin-sidebar/settings-active.svg" alt="Log Out">
+            <span class="font-15 ml-10">Log Out</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

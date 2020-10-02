@@ -1,0 +1,13 @@
+<section class="bg-color-cod-gray d-flex flex-column w-100 vh-100">
+  <div class="section-content d-flex">
+    <profx-sidebar [menus]="menus" class="position-absolute"></profx-sidebar>
+
+    <div class="d-flex flex-column flex-grow-1 content-section position-relative">
+
+      <div #admin_panel_container class="router-wrapper flex-grow-1 overflow-auto pretty-scroll position-relative">
+        <router-outlet></router-outlet>
+      </div>
+
+    </div>
+  </div>
+</section>

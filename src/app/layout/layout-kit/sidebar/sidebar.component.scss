@@ -1,0 +1,93 @@
+@import "../../../../assets/theme";
+
+$sidebar-width: 275px;
+$sidebar-collapsed-width: 84px;
+
+:host {
+  display: block;
+  z-index: 100;
+}
+
+.btn.btn-circle {
+  border-radius: 16px;
+  height: 32px;
+  overflow-y: hidden;
+}
+
+.sidebar {
+  position: relative;
+  width: $sidebar-width;
+  height: 100vh;
+  transition: ease width .3s;
+
+  .main-menu {
+    margin-top: 110px;
+  }
+
+  li {
+    padding-left: 30px;
+    height: 44px;
+    &.active {
+      background-color: $white-opacity;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $mercury;
+    img.active {
+      display: none;
+    }
+    img.inactive {
+      display: block;
+    }
+    span {
+      transition: ease color .3s;
+      min-width: 70px;
+    }
+    &:hover {
+      img.active {
+        display: block;
+      }
+      img.inactive {
+        display: none;
+      }
+    }
+    &.active {
+      img.active {
+        display: block;
+      }
+      img.inactive {
+        display: none;
+      }
+    }
+  }
+
+  .connect-btn-wrapper {
+    display: flex;
+    padding-left: 30px;
+    .btn-circle {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+  }
+
+  &.collapsed {
+    width: $sidebar-collapsed-width;
+    a span {
+      display: none;
+    }
+
+    .connect-btn-wrapper {
+      padding-left: 26px;
+    }
+
+    .btn-circle {
+      padding: 16px !important;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 0;
+    }
+  }
+}
