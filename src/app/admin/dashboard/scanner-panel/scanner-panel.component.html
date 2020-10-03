@@ -1,9 +1,11 @@
-<div class="bg-color-shark border-radius-7 simple-shadow color-mercury p-10 d-flex flex-column">
+<div class="bg-color-shark border-radius-7 simple-shadow color-mercury p-10 d-flex flex-column h-100">
   <div class="px-10 font-24 d-flex align-items-center justify-content-between">
     <span>Scanner</span>
     <fa-icon [icon]="faInfoCircle" class="font-20 color-white-opacity cursor-pointer"></fa-icon>
   </div>
+
   <hr class="w-100 bg-color-mine-shaft m-0"/>
+
   <div class="px-10 py-1 font-weight-light font-15">
     <ul class="list-unstyled mb-0 d-flex justify-content-between font-12">
       <li>5</li>
@@ -14,13 +16,17 @@
       <li>D</li>
     </ul>
   </div>
+
   <hr class="w-100 bg-color-mine-shaft m-0"/>
+
   <div class="px-10 py-0 font-weight-light font-12 d-flex justify-content-between align-items-center">
     <span>Sort by</span>
     <fa-icon [icon]="faSort" class="font-20 color-white-opacity"></fa-icon>
   </div>
+
   <hr class="w-100 bg-color-mine-shaft m-0"/>
-  <div class="flex-shrink-1">
+
+  <div class="overflow-auto pretty-scroll">
     <profx-scanner-item *ngFor="let trade of tradesData" [value]="trade.value" [type]="trade.type"></profx-scanner-item>
   </div>
 </div>
