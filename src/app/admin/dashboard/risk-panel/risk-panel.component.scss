@@ -5,3 +5,7 @@
 .calc-mode-toggle.active {
   background-color: #ffffff20;
 }
+
+select:focus {
+  outline: none;
+}
