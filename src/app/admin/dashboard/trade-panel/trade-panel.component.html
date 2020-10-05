@@ -1,91 +1,91 @@
-<div class="bg-color-shark border-radius-7 simple-shadow p-10 color-mercury">
-  <div class="pl-10 font-24">Trade</div>
+<div class="bg-color-shark border-radius-7 simple-shadow p-1 color-mercury">
+  <div class="pl-10 font-18">Trade</div>
   <hr class="w-100 bg-color-mine-shaft m-0"/>
   <div class="p-10" *ngIf="!ordered;">
-    <div class="font-weight-light font-15 d-flex justify-content-between align-items-center">
+    <div class="font-weight-light font-12 d-flex justify-content-between align-items-center">
       <span>USD / CAD</span>
-      <button class="btn btn-danger text-white btn-mini border-radius-12 py-1 px-30">Exit</button>
+      <button class="btn btn-danger text-white btn-mini border-radius-12 py-0 px-20" (click)="tradeClick.emit(null)">Exit</button>
     </div>
-    <div class="font-weight-light font-15 d-flex justify-content-between align-items-center mt-1">
+    <div class="font-weight-light font-12 d-flex justify-content-between align-items-center mt-1">
       <div class="color-punch d-flex flex-column">
-        <span class="font-15">1.30844</span>
-        <span class="font-12">LOW: 1.30526</span>
+        <span class="font-12">1.30844</span>
+        <span class="font-10">LOW: 1.30526</span>
       </div>
       <div class="color-salem d-flex flex-column">
-        <span class="font-15">1.30861</span>
-        <span class="font-12">LOW: 1.30949</span>
+        <span class="font-12">1.30861</span>
+        <span class="font-10">LOW: 1.30949</span>
       </div>
-      <div class="d-flex flex-column">
+      <div class="d-flex flex-column font-10">
         <span>AUTO</span>
         <span>RISK</span>
       </div>
       <div>
-        <ui-switch size="medium"></ui-switch>
+        <ui-switch size="small"></ui-switch>
       </div>
     </div>
     <hr class="w-100 bg-color-mine-shaft m-0"/>
-    <div class="font-weight-light font-15 d-flex flex-column justify-content-between align-items-center">
-      <div class="w-100 d-flex align-items-center justify-content-between mb-5">
+    <div class="font-weight-light font-12 d-flex flex-column justify-content-between align-items-center">
+      <div class="w-100 d-flex align-items-center justify-content-between">
         <div class="w-50 d-flex justify-content-between align-items-center">
           <span>STOP LOSS</span>
-          <button class="btn color-punch btn-small px-10">-</button>
+          <button class="btn color-punch btn-mini px-2">-</button>
         </div>
         <div class="w-50 d-flex justify-content-between align-items-center">
           <div class="text-center flex-grow-1">1.29201</div>
-          <button class="btn btn-small px-10 color-salem">+</button>
+          <button class="btn btn-mini px-2 color-salem">+</button>
         </div>
       </div>
-      <div class="w-100 d-flex align-items-center justify-content-between mb-5">
+      <div class="w-100 d-flex align-items-center justify-content-between">
         <div class="w-50 d-flex justify-content-between align-items-center">
           <span>TAKE PROFIT</span>
-          <button class="btn color-punch btn-small px-10">-</button>
+          <button class="btn color-punch btn-mini px-2">-</button>
         </div>
         <div class="w-50 d-flex justify-content-between align-items-center">
           <div class="text-center flex-grow-1">1.38234</div>
-          <button class="btn btn-small px-10 color-salem">+</button>
+          <button class="btn btn-mini px-2 color-salem">+</button>
         </div>
       </div>
       <div class="w-100 d-flex align-items-center justify-content-between">
         <div class="w-50 d-flex justify-content-between align-items-center">
           <span>VOLUME</span>
-          <button class="btn color-punch btn-small px-10">-</button>
+          <button class="btn color-punch btn-mini px-2">-</button>
         </div>
         <div class="w-50 d-flex justify-content-between align-items-center">
           <div class="text-center flex-grow-1">0.05</div>
-          <button class="btn btn-small px-10 color-salem">+</button>
+          <button class="btn btn-mini px-2 color-salem">+</button>
         </div>
       </div>
     </div>
     <hr class="w-100 bg-color-mine-shaft m-0"/>
-    <div class="font-weight-light font-15 d-flex flex-column justify-content-between align-items-center">
-      <div class="py-15">LIMIT ORDER</div>
-      <button class="btn btn-primary w-100 py-2" (click)="ordered = true">Buy</button>
+    <div class="font-weight-light font-12 d-flex flex-column justify-content-between align-items-center">
+      <div class="py-1">LIMIT ORDER</div>
+      <button class="btn btn-primary btn-mini w-100 py-1" (click)="ordered = true">Buy</button>
     </div>
   </div>
 
   <div class="p-10" *ngIf="ordered">
     <div class="d-flex flex-column pt-2">
-      <span class="font-13">Buy Order #323903 USD / CAD</span>
-      <span class="text-primary font-17">YOUR ORDER HAS BEEN PLACED</span>
+      <span class="font-10">Buy Order #323903 USD / CAD</span>
+      <span class="text-primary font-12">YOUR ORDER HAS BEEN PLACED</span>
     </div>
     <hr class="w-100 bg-color-mine-shaft m-0"/>
-    <div class="my-2 font-14">
-      <div class="d-flex mb-2">
+    <div class="my-2 font-11">
+      <div class="d-flex">
         <span class="w-50">ENTRY LEVEL</span><span class="w-50">1.29201</span>
       </div>
-      <div class="d-flex mb-2">
+      <div class="d-flex">
         <span class="w-50">STOP LOSS</span><span class="w-50">1.29201</span>
       </div>
-      <div class="d-flex mb-2">
+      <div class="d-flex">
         <span class="w-50">TAKE PROFIT</span><span class="w-50">1.38234</span>
       </div>
-      <div class="d-flex mb-2">
+      <div class="d-flex">
         <span class="w-50">VOLUME</span><span class="w-50">0.05</span>
       </div>
     </div>
     <hr class="w-100 bg-color-mine-shaft m-0"/>
-    <div class="text-center font-20 color-punch mt-1">$ - 0.59</div>
+    <div class="text-center font-12 color-punch">$ - 0.59</div>
     <div class="font-11 text-center mt-1 mb-2">SEE ALL POSITIONS AND ORDERS</div>
-    <button class="btn btn-danger py-2 w-100" (click)="ordered = false">Close</button>
+    <button class="btn btn-danger py-0 w-100" (click)="ordered = false">Close</button>
   </div>
 </div>

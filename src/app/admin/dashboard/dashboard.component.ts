@@ -17,7 +17,7 @@ export class DashboardComponent implements OnInit {
     marginLevel: 225566.24
   };
 
-  isBuying = true;
+  isBuying = false;
 
   constructor() { }
 

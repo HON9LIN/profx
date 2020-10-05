@@ -1,7 +1,7 @@
 @import "../../../../assets/theme";
 
-$sidebar-width: 275px;
-$sidebar-collapsed-width: 84px;
+$sidebar-width: 200px;
+$sidebar-collapsed-width: 60px;
 
 :host {
   display: block;
@@ -16,8 +16,8 @@ $sidebar-collapsed-width: 84px;
 }
 
 .btn.btn-circle {
-  border-radius: 16px;
-  height: 32px;
+  border-radius: 12px;
+  height: 24px;
   overflow-y: hidden;
 }
 
@@ -28,9 +28,9 @@ $sidebar-collapsed-width: 84px;
   transition: ease width .3s;
 
   li {
-    padding-left: 30px;
-    padding-right: 30px;
-    height: 44px;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 35px;
     &.active {
       background-color: $white-opacity;
     }
@@ -69,10 +69,10 @@ $sidebar-collapsed-width: 84px;
 
   .connect-btn-wrapper {
     display: flex;
-    padding-left: 30px;
+    padding-left: 16px;
     .btn-circle {
-      padding-left: 32px;
-      padding-right: 32px;
+      padding-left: 24px;
+      padding-right: 24px;
     }
   }
 
@@ -82,12 +82,8 @@ $sidebar-collapsed-width: 84px;
       display: none;
     }
 
-    .connect-btn-wrapper {
-      padding-left: 26px;
-    }
-
     .btn-circle {
-      padding: 16px !important;
+      padding: 12px !important;
     }
 
     @include media-breakpoint-down(sm) {

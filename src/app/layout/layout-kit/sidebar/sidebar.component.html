@@ -13,10 +13,10 @@
 
       <ul class="list-unstyled overflow-hidden main-menu">
         <li *ngFor="let item of menus" class="d-flex align-items-center py-10" routerLinkActive="active">
-          <a class="d-flex" [routerLink]="[item.route]" routerLinkActive="active" (click)="isCollapsed = true">
+          <a class="d-flex align-items-center" [routerLink]="[item.route]" routerLinkActive="active" (click)="isCollapsed = true">
             <img class="inactive" [src]="'assets/images/admin-sidebar/' + item.icon + '.svg'" [alt]="item.label">
             <img class="active" [src]="'assets/images/admin-sidebar/' + item.icon + '-active.svg'" [alt]="item.label">
-            <span class="font-15 ml-10">{{ item.label }}</span>
+            <span class="font-12 ml-10">{{ item.label }}</span>
           </a>
         </li>
       </ul>
@@ -24,14 +24,14 @@
 
     <div class="d-flex flex-column mb-60">
       <div class="connect-btn-wrapper">
-        <button class="btn btn-primary btn-circle mb-30 text-overflow my-30 font-10 py-0">{{isCollapsed ? '' : 'CONNECTED: INFINOX LIVE-03'}}</button>
+        <button class="btn btn-primary btn-circle mb-30 text-overflow my-30 font-8 py-0">{{isCollapsed ? '' : 'CONNECTED: INFINOX LIVE-03'}}</button>
       </div>
       <ul class="list-unstyled">
         <li class="d-flex align-items-center py-10" [class.overflow-hidden]="isCollapsed">
-          <a class="d-flex cursor-pointer" (click)="logout()">
+          <a class="d-flex cursor-pointer align-items-center" (click)="logout()">
             <img class="inactive" src="assets/images/admin-sidebar/logout.svg" alt="Log Out">
             <img class="active" src="assets/images/admin-sidebar/logout-active.svg" alt="Log Out">
-            <span class="font-15 ml-10">Log Out</span>
+            <span class="font-12 ml-10">Log Out</span>
           </a>
         </li>
       </ul>

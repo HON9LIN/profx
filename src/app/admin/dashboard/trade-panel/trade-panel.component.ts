@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'profx-trade-panel',
@@ -6,6 +6,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./trade-panel.component.scss']
 })
 export class TradePanelComponent implements OnInit {
+
+  @Output() tradeClick = new EventEmitter();
 
   ordered = false;
 

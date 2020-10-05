@@ -1,27 +1,27 @@
-<section class="w-100 vh-100 p-15 d-flex">
+<section class="w-100 vh-100 p-2 d-flex">
   <div class="flex-grow-1 p-0 m-0 d-flex flex-column">
 
-    <div class="bg-color-shark border-radius-13 m-15 p-20 d-flex align-items-center justify-content-between simple-shadow">
-      <span class="color-mercury font-32">GBP / USD</span>
+    <div class="bg-color-shark border-radius-13 m-2 px-15 py-10 d-flex align-items-center justify-content-between simple-shadow">
+      <span class="color-mercury font-22">GBP / USD</span>
       <div class="d-flex">
         <span class="border-radius-9 size-18 bg-color-salem mr-30"></span>
         <span class="border-radius-9 size-18 bg-color-salem mr-30"></span>
         <span class="border-radius-9 size-18 bg-color-salem mr-30"></span>
         <span class="border-radius-9 size-18 bg-color-salem"></span>
       </div>
-      <button class="btn btn-primary buy-btn" (click)="isBuying = !isBuying">Buy</button>
+      <button class="btn btn-primary btn-sm buy-btn" (click)="isBuying = !isBuying">Buy</button>
     </div>
 
-    <div class="bg-color-shark border-radius-13 m-15 simple-shadow flex-grow-1 overflow-hidden p-25">
+    <div class="bg-color-shark border-radius-13 m-2 simple-shadow flex-grow-1 overflow-hidden p-25">
       <iframe src="https://uk.tradingview.com/chart/?symbol=FX%3AGBPUSD" class="w-100 h-100 border-0"></iframe>
     </div>
 
-    <div class="bg-color-shark border-radius-7 m-15 overflow-hidden d-flex flex-column simple-shadow">
-      <div class="font-32 pl-20 py-5 color-mercury">Balance</div>
+    <div class="bg-color-shark border-radius-7 m-2 overflow-hidden d-flex flex-column simple-shadow">
+      <div class="font-22 px-15 py-1 color-mercury">Balance</div>
 
       <hr class="w-100 bg-color-mine-shaft m-0"/>
 
-      <div class="p-30 color-mercury d-flex justify-content-around font-18">
+      <div class="px-15 py-10 color-mercury d-flex justify-content-around font-14">
         <div>Balance: <span class="font-weight-bold color-salem">{{balance.balance | formatNumber: ' '}}</span></div>
         <div>Equity: <span class="font-weight-bold">{{balance.equity | formatNumber: ' '}}</span></div>
         <div>Margin: <span class="font-weight-bold">{{balance.margin | formatNumber: ' '}}</span></div>
@@ -31,9 +31,9 @@
     </div>
   </div>
 
-  <div class="w-400 m-15 d-flex flex-column">
-    <profx-risk-panel *ngIf="isBuying" class="mb-30"></profx-risk-panel>
-    <profx-trade-panel *ngIf="isBuying" class="mb-30"></profx-trade-panel>
+  <div class="w-300 m-2 d-flex flex-column">
+    <profx-risk-panel *ngIf="isBuying" class="mb-10"></profx-risk-panel>
+    <profx-trade-panel *ngIf="isBuying" (tradeClick)="isBuying=false" class="mb-10"></profx-trade-panel>
     <profx-scanner-panel class="flex-1 min-height-0"></profx-scanner-panel>
   </div>
 </section>
