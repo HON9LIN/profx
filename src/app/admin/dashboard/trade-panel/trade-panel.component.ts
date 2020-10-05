@@ -8,6 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class TradePanelComponent implements OnInit {
 
   @Output() tradeClick = new EventEmitter();
+  @Output() tradeClose = new EventEmitter();
 
   ordered = false;
 

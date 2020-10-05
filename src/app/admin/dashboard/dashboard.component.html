@@ -33,7 +33,7 @@
 
   <div class="w-300 m-2 d-flex flex-column">
     <profx-risk-panel *ngIf="isBuying" class="mb-10"></profx-risk-panel>
-    <profx-trade-panel *ngIf="isBuying" (tradeClick)="isBuying=false" class="mb-10"></profx-trade-panel>
+    <profx-trade-panel *ngIf="isBuying" (tradeClick)="isBuying=false" (tradeClose)="isBuying=false" class="mb-10"></profx-trade-panel>
     <profx-scanner-panel class="flex-1 min-height-0"></profx-scanner-panel>
   </div>
 </section>
