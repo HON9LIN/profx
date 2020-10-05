@@ -12,17 +12,22 @@
     </div>
     <div class="d-flex justify-content-between mt-2">
       <div class="d-flex flex-column justify-content-between">
-        <div><span>RISK:&nbsp;</span><span class="border-radius-7 light-border px-20">{{risk}}</span></div>
+        <div>
+          <span>RISK:&nbsp;</span>
+          <select class="border-radius-7 light-border px-10 pt-1 bg-color-shark color-mercury">
+            <option *ngFor="let riskOption of riskOptions">{{riskOption}}</option>
+          </select>
+        </div>
         <div>PROFIT</div>
       </div>
       <div class="d-flex flex-column justify-content-between">
-        <span class="border-radius-7 light-border px-20">{{riskUsd}}</span>
-        <span class="border-radius-7 light-border px-20">{{profit}}</span>
+        <span class="border-radius-7 light-border px-20 pt-1">{{riskUsd}}</span>
+        <span class="border-radius-7 light-border px-20 pt-1">{{profit}}</span>
       </div>
-      <div class="border-radius-7 bg-color-white-opacity px-20 py-5 font-12">
-        <div>$</div>
+      <div class="border-radius-7 bg-color-white-opacity px-0 py-5 font-12">
+        <div [class.active]="calcMode === CalcMode.Usd" class="cursor-pointer px-2 mx-1 border-radius-5 calc-mode-toggle" (click)="calcMode = CalcMode.Usd">$</div>
         <hr class="w-100 bg-color-mercury my-1"/>
-        <div>%</div>
+        <div [class.active]="calcMode === CalcMode.Percent" class="cursor-pointer px-2 mx-1 border-radius-5 calc-mode-toggle" (click)="calcMode = CalcMode.Percent">%</div>
       </div>
     </div>
   </div>

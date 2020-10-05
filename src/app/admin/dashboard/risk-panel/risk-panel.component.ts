@@ -1,5 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+enum CalcMode {
+  Percent = 'PERCENT',
+  Usd = 'USD',
+}
+
 @Component({
   selector: 'profx-risk-panel',
   templateUrl: './risk-panel.component.html',
@@ -14,6 +19,9 @@ export class RiskPanelComponent implements OnInit {
   @Input() riskUsd = 150;
   @Input() profit = 450;
 
+  calcMode = CalcMode.Percent;
+  CalcMode = CalcMode;
+  riskOptions = ['1:1', '1:2', '1:3', '1:4', '1:5'];
 
   constructor() {
   }
