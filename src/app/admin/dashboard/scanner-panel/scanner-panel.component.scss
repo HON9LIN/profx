@@ -4,10 +4,10 @@ ul {
     display: flex;
     align-items: center;
     cursor: pointer;
+    padding: 5px 15px 5px 15px;
     &.active {
       color: #e1e1e1;
       border-radius: 7px;
-      padding: 5px 15px 5px 15px;
       background-color: rgba(255, 255, 255, 0.05);
     }
   }

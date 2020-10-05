@@ -14,6 +14,17 @@ export class ScannerPanelComponent implements OnInit {
   faInfoCircle = faInfoCircle;
   faSort = faSort;
 
+  timeFrameOptions = [
+    { key: '5', value: '5' },
+    { key: '15', value: '15' },
+    { key: '30', value: '30' },
+    { key: '60', value: '60' },
+    { key: '240', value: '240' },
+    { key: 'D', value: 'D' },
+  ];
+
+  timeFrame = '60';
+
   constructor() {
   }
 

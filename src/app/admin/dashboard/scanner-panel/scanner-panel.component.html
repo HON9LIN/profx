@@ -8,12 +8,9 @@
 
   <div class="px-10 py-1 font-weight-light font-15">
     <ul class="list-unstyled mb-0 d-flex justify-content-between font-12">
-      <li>5</li>
-      <li>15</li>
-      <li>30</li>
-      <li class="active">60</li>
-      <li>240</li>
-      <li>D</li>
+      <li *ngFor="let timeFrameOption of timeFrameOptions"
+          (click)="timeFrame = timeFrameOption.key"
+          [class.active]="timeFrameOption.key === timeFrame">{{timeFrameOption.value}}</li>
     </ul>
   </div>
 
