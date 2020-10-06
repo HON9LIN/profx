@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "build": "ng build",
+    "build:gh": "ng build --prod --base-href https://triaton.github.io/profx",
     "start": "node server.js",
     "test": "ng test",
     "lint": "ng lint",

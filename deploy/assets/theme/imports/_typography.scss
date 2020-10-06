@@ -1,0 +1,42 @@
+@for $i from 5 through 60 {
+  .font-#{$i} {
+    font-size: #{$i}px;
+  }
+}
+
+@for $i from 5 through 50 {
+  .line-height-#{$i} {
+    line-height: #{$i}px;
+  }
+}
+
+.font-weight-medium {
+  font-weight: 500;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+h6 {
+  line-height: 24px;
+}
+
+p {
+  line-height: 22px;
+}
+
+.underline {
+  text-decoration: underline !important;
+}
+
+.text-overflow {
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

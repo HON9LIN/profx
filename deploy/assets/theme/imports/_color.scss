@@ -1,0 +1,50 @@
+@mixin colors($property) {
+  &-salem {
+    #{$property}: $salem;
+  }
+  &-selective-yellow {
+    #{$property}: $selective-yellow;
+  }
+  &-punch {
+    #{$property}: $punch;
+  }
+  &-mercury {
+    #{$property}: $mercury;
+  }
+  &-shark {
+    #{$property}: $shark;
+  }
+  &-white-opacity {
+    #{$property}: white-opacity;
+  }
+  &-atoll {
+    #{$property}: $atoll;
+  }
+  &-jewel {
+    #{$property}: $jewel;
+  }
+  &-black {
+    #{$property}: $black;
+  }
+  &-cod-gray {
+    #{$property}: $cod-gray;
+  }
+  &-mine-shaft {
+    #{$property}: $mine-shaft;
+  }
+  &-white-opacity {
+    #{$property}: $white-opacity;
+  }
+}
+
+.color {
+  @include colors(color);
+}
+
+.bg-color {
+  @include colors(background-color);
+}
+
+.border-color {
+  @include colors(border-color);
+}

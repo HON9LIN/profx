@@ -1,0 +1,9 @@
+@include media-breakpoint-down(md) {
+  .cdk-overlay-pane {
+    max-width: 95vw !important;
+  }
+
+  .mat-dialog-content {
+    max-height: 50vh !important;
+  }
+}
