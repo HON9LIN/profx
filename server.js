@@ -7,6 +7,7 @@ const app = express();
 // Serve only the static files form the dist directory
 app.use(express.static('./dist/profx'));
 
+// serve index.html as a root page
 app.get('/*', function(req,res) {
 
   res.sendFile(path.join(__dirname,'/dist/profx/index.html'));
