@@ -6,6 +6,7 @@
     "build": "ng build",
     "build:gh": "ng build --prod --base-href https://triaton.github.io/profx",
     "start": "node server.js",
+    "start:dev": "ng serve",
     "test": "ng test",
     "lint": "ng lint",
     "postinstall": "ng build --aot --prod",
